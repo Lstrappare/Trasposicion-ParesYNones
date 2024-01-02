@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ordenamiento Pares y Nones</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Trasposición Pares y Nones</h1>
+    <p>
+        El algoritmo consiste en dos etapas. En la primera, se comparan los datos nones
+        con su sucesor y se les intercambia si es necesario. En la segunda se comparan
+        los datos pares con su sucesor y se les intercambia si es necesario, el proceso se
+        práctica hasta que en ambas pasadas no se encuentre un intercambio.
+    </p>
+    <p>
+        Para comenzar el ordenamiento de pares y nones, ingresa los números separados por 
+        comas en el siguiente formato: 1,2,3,4,5,6,7,8,9,10
+    </p>
+    <input type="text" id="inputArreglo" placeholder="Ingrese el arreglo">
+    <button id="iniciar">Iniciar ordenamiento</button>
+    <div id="resultados">
+        <p id="estadoInicial">Estado inicial del arreglo: </p>
+        <div id="columnas"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
