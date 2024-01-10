@@ -1,6 +1,6 @@
 # Trasposición Pares y Nones (Interactivo) 🫨
 
-[**Demo en vivo**](https://lstrappare.github.io/Trasposicion-ParesYNones/)
+[**Demo**](https://lstrappare.github.io/Trasposicion-ParesYNones/)
 
 El algoritmo de Trasposición de Pares y Nones es un algoritmo de ordenación interactivo que se implementa en este proyecto. Consiste en dos etapas: en la primera, se comparan los datos en posiciones impares (nones) con sus sucesores y se intercambian si es necesario. En la segunda etapa, se realizan comparaciones similares con los datos en posiciones pares. Este proceso se repite hasta que en ambas pasadas no se encuentren intercambios.
 
@@ -16,6 +16,3 @@ El algoritmo de Trasposición de Pares y Nones es un algoritmo de ordenación in
 
 ## Contribuciones
 ¡Contribuciones y sugerencias son bienvenidas! Si encuentras una manera de mejorar el proyecto, siéntete libre de hacer un aporte. Abre un problema o envía una solicitud de extracción.
-
-## Licencia
-Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
