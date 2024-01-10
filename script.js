@@ -2,7 +2,7 @@ document.getElementById('iniciar').addEventListener('click', function () {
     let inputArreglo = document.getElementById('inputArreglo').value;
     let arreglo = inputArreglo.split(',').map(Number);
 
-    let iteracion = 1;
+    let intercambio = 1;
     let pausar = false;
 
     async function trasposicionParesNones(arr) {
@@ -21,7 +21,7 @@ document.getElementById('iniciar').addEventListener('click', function () {
                     intercambioNones = true;
                 }
             }
-            await mostrarPaso(iteracion, 'Nones', arr);
+            await mostrarPaso(intercambio, 'Nones', arr);
 
             // Etapa 2: Comparar pares y hacer intercambios
             for (let i = 1; i < arr.length - 1; i += 2) {
@@ -30,9 +30,9 @@ document.getElementById('iniciar').addEventListener('click', function () {
                     intercambioPares = true;
                 }
             }
-            await mostrarPaso(iteracion, 'Pares', arr);
+            await mostrarPaso(intercambio, 'Pares', arr);
 
-            iteracion++;
+            intercambio++;
 
             while (pausar) {
                 await new Promise(resolve => setTimeout(resolve, 100));
@@ -50,7 +50,7 @@ document.getElementById('iniciar').addEventListener('click', function () {
                 // Columna
                 let columna = document.createElement('div');
                 columna.classList.add('columna');
-                columna.innerText = `Interacción ${iteracion} (${tipo}): [${arr.join(', ')}]`;
+                columna.innerText = `Intercambio ${intercambio} (${tipo}): [${arr.join(', ')}]`;
 
                 // Agregar la columna al contenedor
                 document.getElementById('columnas').appendChild(columna);
@@ -59,8 +59,7 @@ document.getElementById('iniciar').addEventListener('click', function () {
             }, 1000);
         });
     }
-
-    // Limpiar resultados
+    
     document.getElementById('iniciar').addEventListener('click', function () {
         document.getElementById('columnas').innerHTML = '';
     });
