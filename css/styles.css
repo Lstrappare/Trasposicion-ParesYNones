@@ -1,7 +1,7 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: linear-gradient(to right, #01283a, #1a1d23);
-    color: #fff;
+    color: #f0f0f0;
     margin: 0;
     padding: 0;
     display: flex;
@@ -32,6 +32,11 @@ input, button {
     border-radius: 5px;
 }
 
+#inputArreglo,
+#iniciar {
+    margin: 15px 0;
+}
+
 button {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -57,9 +62,32 @@ button:hover {
     margin: 10px 0;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+.columna.nones {
+    border-left: 4px solid #ff6f61;
+}
+
+.columna.pares {
+    border-left: 4px solid #61dafb;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #estadoInicial {
     font-weight: bold;
     margin-bottom: 10px;
+}
+
+#resultados {
+    max-height: 400px;
+    overflow-y: auto;
 }
